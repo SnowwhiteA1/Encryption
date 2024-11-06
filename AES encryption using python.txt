@@ -1,0 +1,29 @@
+AES encryption using python
+
+1. IV- initialization Vector- must be random and new everytime our encryption function is used
+2. salt -A random 16-byte salt used in key derivation to make the generated key more secure.
+
+3. cipher -an instance of the AES cipher, initialized with the encryption key and IV in CBC (Cipher Block Chaining) mode
+
+AES-CBC Mode: Decrypts the ciphertext or encrypts the plaintext  using the derived key and extracted IV.
+
+4. Crypto.Cipher.AES: Provides AES encryption and decryption functionality.
+5. Crypto.Random.get_random_bytes: Securely generates random bytes for cryptographic use (salt, IV).
+6. Crypto.Protocol.KDF.PBKDF2: Derives a secure key from a password and salt using the PBKDF2 algorithm.
+7. Crypto.Util.Padding.pad: Ensures plaintext is padded to the correct block size for AES encryption.
+8. base64.b64encode: Encodes the ciphertext in Base64 to make it easier to display/store.
+
+
+PBKDF2 (Password-Based Key Derivation Function 2) is a key derivation algorithm designed to take a password 
+and generate a cryptographically secure key that can be used for encryption,
+
+
+Window Creation: Initializes the main application window using tk.Tk().
+Labels (ttk.Label): Describe text for input fields.
+Entries (ttk.Entry): Allow users to input plaintext, passwords, and ciphertext.
+Buttons:
+1. Encrypt (ttk.Button): Triggers the encryption process.
+2. Decrypt (ttk.Button): Triggers the decryption process.
+
+Padding: Ensures data conforms to AES requirements, preventing encryption errors.
+Encoding/Decoding: assists the transformation of binary data into a human-readable format (hex) and vice versa,
